@@ -1,27 +1,15 @@
-# angularMaterialDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This is angular application with angular material UI library.
+I used my universal model with different view options, like: header-body, header-body-footer...
+There are a lot of ways of implementing this task.
+For exapmle, make all work in one component, without services, or make one parent component (workers), that have a child component(flights-for-worker), that have a child with flight info(flight-info). By input and output events realize an application.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+I prefer to use an independent components, that got data from services.
+With rsJs library I can use an Observables pattern and save data in BehaviorSubjects. This helps to update data without using two way data binding, and my app will works faster.
+One of the most important things, for using this strategy, is not forget to do unsubscribe for Observable objects. I ussialy do this in OnDestroy() method.
+In services, I prefer to save a pure data and, if I need to add some extra fields(like 'selected'), do it in specific component.
+All variables and methods, that I use in HTML, will be public and, for inner component using, private.
+You can, also see a custom pipe, for converting a duration data. The folder with pipes, will be in component module.

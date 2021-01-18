@@ -6,6 +6,8 @@ import { BodyFooterComponent } from './body-footer/body-footer.component';
 import { HeaderComponent } from './view-parts/header/header.component';
 import { BodyComponent } from './view-parts/body/body.component';
 import { FooterComponent } from './view-parts/footer/footer.component';
+import { BodyViewComponent } from './body-view/body-view.component';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -16,15 +18,18 @@ import { FooterComponent } from './view-parts/footer/footer.component';
     BodyFooterComponent,
     HeaderComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    BodyViewComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentsModule
   ],
   exports: [
     HeaderBodyFooterComponent,
     HeaderBodyComponent,
-    BodyFooterComponent
+    BodyFooterComponent,
+    BodyViewComponent
   ]
 })
 export class ViewsModule { }

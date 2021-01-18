@@ -7,9 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewsModule } from './views/views.module';
 import { ComponentsModule } from './components/components.module';
-import { DirectivesModule } from './directives/directives.module';
-import { GlobalServicesModule } from './global-services/global-services.module';
-import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -24,9 +21,6 @@ import { PipesModule } from './pipes/pipes.module';
     ReactiveFormsModule,
     ViewsModule,
     ComponentsModule,
-    DirectivesModule,
-    GlobalServicesModule,
-    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
